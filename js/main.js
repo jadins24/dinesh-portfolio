@@ -8,18 +8,25 @@ $('.i-slide').owlCarousel({
 		
 		600:{
 			items:5
-		}
+        },
+        300:{
+            items:1
+        }
 		
 	}
 });
-function downloadFile(filePath) {
-    var link = document.createElement("a");
-    link.href = filePath;
-    link.download = filePath.split("/").pop();
-    document.body.appendChild(link);
-    link.click();
-    link.remove();
-}
+
+// nav
 
 
 
+AOS.init();
+
+VanillaTilt.init(document.querySelector(".about-img"),{
+    max:20,
+    speed:100,
+    perspective:500,
+    easing:"cubic-bwzier(.05,.85,.35,1.8)",
+    scale:1,
+
+});
